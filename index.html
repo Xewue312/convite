@@ -1,0 +1,41 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <title>Compartilhar Foto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            max-width: 80%;
+            margin-top: 20px;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Compartilhe uma Foto</h1>
+    <p>Adicione o link da sua foto abaixo e veja a mágica acontecer!</p>
+    <input type="text" id="photoLink" placeholder="Cole o link da sua foto aqui" style="width: 80%; padding: 10px;">
+    <button onclick="updatePhoto()">Atualizar Foto</button>
+    <div>
+        <img id="photo" src="" alt="Sua Foto Aparecerá Aqui!">
+    </div>
+    <script>
+        function updatePhoto() {
+            const photoLink = document.getElementById("photoLink").value;
+            const photo = document.getElementById("photo");
+            if (photoLink) {
+                photo.src = photoLink;
+            } else {
+                alert("Por favor, insira um link válido!");
+            }
+        }
+    </script>
+</body>
+</html>
